@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>電車は、あと何分？｜高島拓人｜2026.10.31</title>
+<style>
+:root{--paper:#fff;--ink:#152b3a;--muted:#152b3a;--line:#dce4e8;--blue:#006db1;--green:#117452;--orange:#ad481d;--rainbow:linear-gradient(90deg,#ed6257 0%,#ed9c37 18%,#e6cd43 34%,#64b678 51%,#40a7c6 68%,#6785d4 84%,#b57ac1 100%);--sans:"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#e5ebed;color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}button,a{-webkit-tap-highlight-color:transparent}button{font:inherit;color:inherit}::selection{background:#ffdf83;color:#152b3a}button:focus-visible,a:focus-visible{outline:4px solid var(--blue);outline-offset:6px}#viewport{position:absolute;inset:0;display:grid;place-items:center}#stage{position:absolute;left:50%;top:50%;margin-left:-800px;margin-top:-450px;width:1600px;height:900px;background:var(--paper);transform-origin:center;flex-shrink:0;overflow:hidden}.progress-track{position:absolute;z-index:3;top:0;left:0;width:100%;height:10px;background:#edf1f3}.progress{height:100%;background:var(--rainbow);width:100%;transform:scaleX(.0909);transform-origin:left;transition:transform .3s ease}.slide{position:absolute;inset:0;padding:110px 96px 110px;display:none}.slide.active{display:block}.page{position:absolute;right:64px;top:43px;font-family:var(--mono);font-size:25px;color:var(--muted)}.page b{color:var(--ink);font-weight:600}.eyebrow{font-size:25px;font-weight:600;letter-spacing:.025em;margin:0 0 28px;color:var(--muted)}h1,h2,p{margin:0}h1{font-size:64px;line-height:1.34;letter-spacing:-.035em;font-weight:700}h2{font-size:44px;line-height:1.4;letter-spacing:-.025em;font-weight:700}.sub{font-size:31px;line-height:1.75;color:var(--muted)}.small{font-size:24px;line-height:1.65;color:var(--muted)}.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}.blue{color:var(--blue)}.green{color:var(--green)}.orange{color:var(--orange)}.bottom-note{position:absolute;left:96px;bottom:121px;font-size:24px;line-height:1.6;color:var(--muted)}.content{margin-top:64px}.rule{height:8px;background:var(--rainbow);border-radius:4px}.footer{position:absolute;z-index:4;bottom:32px;left:64px;right:64px;display:flex;align-items:center;justify-content:space-between;font-size:20px;color:var(--muted);pointer-events:none}.footer button{pointer-events:auto;cursor:pointer;background:none;border:0;padding:8px 12px}.timer{font-family:var(--mono);font-size:23px}.timer-label{font-family:var(--sans);font-size:20px;margin-right:14px}.nav{display:flex;align-items:center;gap:12px}.nav button{border:1px solid #b7c5cc;width:54px;height:44px;display:grid;place-items:center;border-radius:8px}.nav button:disabled{opacity:.3;cursor:default}.nav svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2}.hint{font-size:18px;margin-right:18px}.reveal{opacity:1}.active .reveal{animation:arrive .65s cubic-bezier(.16,1,.3,1) both;animation-delay:calc(var(--order,0)*.13s)}@keyframes arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}@media(prefers-reduced-motion:reduce){.active .reveal{animation:none}.progress{transition:none}}body.export .reveal{animation:none!important;opacity:1!important;transform:none!important}body.export .footer{display:none}
+/* Route diagrams use their text labels as the primary meaning. */
+.cover-meta{margin-top:35px;font-size:26px;line-height:1.7;color:var(--muted)}.cover-route{position:absolute;left:100px;right:100px;top:655px;height:105px}.route-line{position:absolute;top:28px;left:0;right:0;height:10px;background:var(--rainbow);border-radius:8px}.stop{position:absolute;top:12px}.stop-dot{width:42px;height:42px;border:8px solid var(--ink);background:#fff;border-radius:50%}.stop-label{font-size:25px;margin-top:16px;white-space:nowrap}.stop:nth-of-type(2){left:0}.stop:nth-of-type(3){left:48%}.stop:nth-of-type(4){right:0}.cover-credit{position:absolute;right:100px;top:440px;font-size:27px}.cover-credit strong{display:block;font-size:42px;margin-top:12px}.intro-name{font-size:76px;letter-spacing:.025em}.intro-split{display:grid;grid-template-columns:1.05fr 1fr;gap:110px;align-items:center;margin-top:72px}.intro-side{border-top:8px solid var(--ink);padding-top:35px}.intro-side p{font-size:40px;line-height:1.8}.intro-theme{margin-top:25px;font-size:27px;color:var(--muted)}.need-diagram{display:flex;align-items:center;gap:54px;margin-top:64px}.timetable{width:560px;padding:30px 0;border-top:3px solid var(--line);border-bottom:3px solid var(--line)}.table-title{font-size:28px;margin-bottom:22px}.table-bars{display:grid;gap:18px}.table-row{display:flex;gap:15px;align-items:center}.table-row span{display:block;background:#dce4e8;width:53px;height:15px;border-radius:3px}.table-row span:first-child{width:80px;background:#9badb8;margin-right:16px}.table-row:nth-child(2) span:nth-child(3){background:#ed9c37}.diagram-arrow{font-size:56px;color:var(--muted)}.departure-message{width:660px}.departure-message .big{font-size:66px;line-height:1.45}.sample-note{margin-top:28px;font-size:26px;line-height:1.7;color:var(--muted)}.zero-layout{display:flex;align-items:center;gap:95px;margin-top:20px}.zero{font-size:280px;line-height:1.02;font-weight:600;letter-spacing:-.09em;color:var(--blue)}.zero-unit{font-size:76px;margin-left:28px}.zero-explain{font-size:40px;line-height:1.85}.code-stripe{margin-top:26px;height:10px;width:370px;background:var(--rainbow);border-radius:5px}.codex-word{font-size:120px;line-height:1.15;letter-spacing:-.055em;font-weight:600}.tool-layout{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:70px;margin-top:70px}.tool-description{font-size:39px;line-height:1.85}.terminal-mark{font-size:49px;color:var(--blue);margin-bottom:18px}.tool-foot{margin-top:30px;font-size:25px;color:var(--muted)}.prompt-box{margin-top:50px;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink);padding:30px 0 32px;display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:start}.prompt-label{font-size:25px;color:var(--blue);padding-top:9px}.prompt-text{font-size:40px;line-height:1.75}.prompt-definition{margin-top:32px;display:flex;align-items:baseline;gap:25px}.prompt-definition strong{font-size:42px}.prompt-definition span{font-size:29px;color:var(--muted)}.freedom-scale{margin-top:65px;position:relative}.scale-labels{display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:50px;align-items:start}.scale-item{padding-top:32px;position:relative}.scale-item h3{font-size:34px;margin:0 0 18px}.scale-item p{font-size:27px;line-height:1.7;color:var(--muted)}.scale-item.good h3{color:var(--green)}.scale-track{height:16px;background:linear-gradient(90deg,#e6e9eb 0%,#b9dec9 40%,#7bc4a5 50%,#b9dec9 60%,#e6e9eb 100%);border-radius:8px}.scale-needle{position:absolute;top:-15px;left:50%;width:44px;height:44px;background:#fff;border:10px solid var(--green);border-radius:50%;transform:translateX(-50%)}.scale-item.good{padding-left:12px;padding-right:12px}.roles{display:grid;grid-template-columns:1.2fr 1fr;gap:95px;margin-top:50px}.role-head{font-size:31px;display:flex;align-items:center;gap:18px;margin-bottom:28px}.role-symbol{display:grid;place-items:center;width:50px;height:50px;border:3px solid currentColor;border-radius:50%;font-family:var(--mono);font-size:26px}.role-row{font-size:35px;line-height:1.6;padding:18px 0;border-top:2px solid var(--line)}.role-row strong{font-weight:600}.role-caption{font-size:25px;color:var(--muted);margin-top:16px}.file-layout{display:grid;grid-template-columns:430px 1fr;gap:82px;align-items:start;margin-top:55px}.filename{font-size:62px;letter-spacing:-.045em;margin-top:33px}.file-caption{font-size:29px;line-height:1.8;margin-top:20px}.file-sheet{background:#f0f5f7;padding:32px 40px;border-radius:12px;position:relative}.file-sheet:before{content:"";display:block;height:7px;background:var(--rainbow);position:absolute;left:0;top:0;right:0;border-radius:12px 12px 0 0}.file-sheet p{font-size:29px;line-height:1.9}.file-sheet .comment{font-size:24px;color:var(--muted);margin-bottom:14px}.file-sheet .line{font-family:var(--mono);font-size:20px;color:#657b89;margin-right:22px}.source{position:absolute;left:96px;bottom:110px;font-size:19px;color:var(--muted);line-height:1.6}.source a{color:inherit;text-decoration-thickness:1px;text-underline-offset:4px}.thinking-title{font-size:44px;line-height:1.5}.decision-loop{margin-top:55px;display:grid;grid-template-columns:1.3fr 80px 1fr 80px 1.3fr;align-items:center;gap:12px}.loop-node{padding-top:24px;border-top:7px solid var(--ink)}.loop-node.ai{border-color:var(--blue)}.loop-node .who{font-size:25px;color:var(--muted);margin-bottom:14px}.loop-node .act{font-size:43px;line-height:1.5}.loop-arrow{text-align:center;font-size:45px;color:#7b909d}.thinking-note{margin-top:45px;font-size:30px;color:var(--muted)}.final-title{font-size:44px;line-height:1.45}.learning{font-size:32px;line-height:1.8;margin-top:25px}.learning strong{color:var(--blue)}.future{display:grid;grid-template-columns:370px 1fr;gap:50px;margin-top:24px;padding-top:22px;border-top:8px solid transparent;border-image:var(--rainbow) 1}.future-station .station-label{font-size:24px;color:var(--muted)}.future-station .station{font-size:63px;font-weight:700;margin-top:10px}.future-station .station-code{font-family:var(--mono);font-size:26px;margin-top:8px;color:var(--blue)}.future-details{font-size:27px;line-height:1.65}.future-details strong{font-weight:600}.thanks{position:absolute;bottom:125px;right:96px;font-size:23px;color:var(--muted)}
+@page{size:1600px 900px;margin:0}@media print{html,body{height:auto!important;width:1600px!important;overflow:visible!important;background:white}#viewport{position:static;display:block}#stage{position:static;margin:0;height:auto;overflow:visible;transform:none!important;width:1600px}.slide{position:relative;display:block!important;height:900px;width:1600px;break-after:page;page-break-after:always}.slide:last-of-type{break-after:auto;page-break-after:auto}.reveal{animation:none!important;opacity:1!important;transform:none!important}.footer,.progress-track{display:none}.slide:before{content:"";position:absolute;top:0;left:0;right:0;height:10px;background:var(--rainbow)}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.message{font-size:44px;line-height:1.7;margin-top:75px;max-width:1350px}.message strong{font-weight:600}.message-note{font-size:30px;line-height:1.8;margin-top:35px;color:var(--muted)}.intro-side p{font-size:34px}.intro-side .sub{font-size:30px}.intro-split{margin-top:95px}.freedom-scale{margin-top:55px}.decision-loop{margin-top:65px}.learning-flow{margin-top:58px;display:grid;grid-template-columns:1fr 90px 1fr;gap:35px;align-items:start}.learning-flow .step{padding-top:24px;border-top:6px solid var(--ink)}.learning-flow .step.ai{border-color:var(--blue)}.learning-flow .step h3{font-size:30px;margin:0 0 20px}.learning-flow .step p{font-size:37px;line-height:1.75}.learning-flow .diagram-arrow{padding-top:65px;text-align:center}.future{margin-top:64px;padding-top:35px}.future-details{font-size:30px;line-height:1.85}.future-station .station{font-size:54px}.page{font-size:23px}.cover-sub{font-size:30px;color:var(--muted);margin-top:35px}.sample-note{margin-top:36px}.zero-layout{margin-top:65px}.prompt-box{margin-top:65px}.file-layout{margin-top:80px}.tool-layout{margin-top:95px}.roles{margin-top:80px}
+
+/* Centered content balance */
+.slide{padding-left:144px;padding-right:144px}
+.slide>h2{max-width:1312px;margin-left:auto;margin-right:auto}
+.slide:first-of-type .eyebrow{text-align:center}
+.slide:first-of-type h1{max-width:1100px;margin-left:auto;margin-right:auto;text-align:center}
+.cover-credit{position:static;margin-top:38px;text-align:center;font-size:25px}
+.cover-credit strong{display:inline-block;margin:0 0 0 22px;font-size:36px}
+.cover-route{left:144px;right:144px}
+.intro-split{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:1fr 1.15fr;gap:90px}
+.intro-split>div:first-child{text-align:center}
+.intro-split .code-stripe{margin-left:auto;margin-right:auto}
+.need-diagram{max-width:1210px;margin-left:auto;margin-right:auto;gap:44px}
+.timetable{width:440px;flex:0 0 440px}
+.departure-message{width:auto;flex:1}
+.departure-message .big{font-size:52px}
+.sample-note{text-align:center}
+.zero-layout{justify-content:center}
+.tool-layout{max-width:1120px;margin-left:auto;margin-right:auto;grid-template-columns:400px 1fr;gap:90px}
+.tool-layout>div:first-child{text-align:center}
+.prompt-definition{justify-content:center}
+.prompt-box{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:190px 1fr;gap:38px}
+.message{max-width:1160px;margin-left:auto;margin-right:auto;text-align:center}
+.message-note{max-width:1312px;margin-left:auto;margin-right:auto;text-align:center;font-size:28px}
+.freedom-scale{max-width:1210px;margin-left:auto;margin-right:auto}.scale-labels{grid-template-columns:1fr 1.35fr 1fr;gap:44px}
+.roles{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:1fr 1fr;gap:90px}
+.file-layout{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:350px 1fr;gap:70px}
+.file-layout>div:first-child{text-align:center}
+.file-caption{font-size:27px}
+.decision-loop{max-width:1210px;margin-left:auto;margin-right:auto;grid-template-columns:1fr 70px 1fr 70px 1fr;gap:16px}
+.loop-node .act{font-size:36px}
+.learning-flow{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:1fr 70px 1fr;gap:50px}
+.future{max-width:1160px;margin-left:auto;margin-right:auto;grid-template-columns:350px 1fr;gap:75px}
+.future-station{text-align:center}
+.bottom-note,.source{left:144px;right:144px}
+@media print{.slide{padding-left:144px;padding-right:144px}}
+
+/* One point per slide, with supporting details removed. */
+.simple-body{position:absolute;top:240px;left:180px;right:180px;bottom:170px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:42px}
+.simple-message{font-size:48px;line-height:1.8;font-weight:500;letter-spacing:0;max-width:1240px}
+.simple-note{font-size:29px;line-height:1.9;color:var(--muted);max-width:1200px}
+.simple-name{font-size:76px;letter-spacing:.025em}
+.simple-zero{display:flex;align-items:baseline;gap:28px;color:var(--blue)}
+.simple-zero .mono{font-size:240px;line-height:1;font-weight:600}
+.simple-zero>span:last-child{font-size:65px;color:var(--ink)}
+.simple-tool{font-size:112px;line-height:1.2;letter-spacing:-.04em}
+.slide:first-of-type h1{margin-top:62px}
+.cover-credit{margin-top:54px;font-size:32px}
+
+/* Titles, explanations and examples form one readable group. */
+.simple-body{top:165px;bottom:145px;gap:30px}
+.simple-body>h2{font-size:38px;line-height:1.5;font-weight:650;letter-spacing:0;text-align:center;margin:0 0 18px;color:var(--ink)}
+.simple-message{font-size:46px;line-height:1.75;color:var(--ink)}
+.simple-note{font-size:34px;line-height:1.75;color:var(--ink)}
+.eyebrow,.page,.footer{color:var(--ink)}
+.simple-zero .mono{font-size:190px}
+.simple-zero>span:last-child{font-size:58px}
+.simple-tool{font-size:104px}
+
+/* Read in order: heading, point, explanation, example. */
+.simple-body{top:140px;bottom:125px;gap:24px}
+.simple-body>h2{margin-bottom:10px}
+.simple-message{line-height:1.5}
+.simple-note{line-height:1.6}
+.simple-zero .mono{font-size:160px}
+.simple-tool{font-size:90px}
+.compare{display:grid;grid-template-columns:1fr 70px 1fr;align-items:center;gap:18px;width:100%;font-size:31px;line-height:1.65}
+.compare-label{display:block;font-size:29px;font-weight:650;margin-bottom:10px}
+.flow-arrow{font-size:46px;color:var(--blue)}
+.example{border-left:6px solid var(--blue);padding:8px 30px;text-align:left;font-size:33px;line-height:1.6;max-width:1180px}
+.example-label{font-size:28px;font-weight:650;margin-bottom:10px}
+.role-pair{display:grid;grid-template-columns:1fr 1fr;gap:72px;font-size:32px;line-height:1.6;width:1080px}
+.role-pair>p{border-top:4px solid var(--blue);padding-top:20px}
+.role-pair>p:last-child{border-color:var(--green)}
+.process{display:flex;justify-content:center;gap:62px;list-style:none;padding:0;margin:8px 0;font-size:31px;line-height:1.6}
+.process li{position:relative;min-width:255px}
+.process li+li:before{content:'→';position:absolute;left:-45px;top:35px;font-size:36px;color:var(--blue)}
+.step-number{display:block;font-size:39px;color:var(--blue);margin-bottom:6px}
+.decisions{display:flex;gap:52px;font-size:33px;line-height:1.6}
+.decisions span{border-bottom:5px solid var(--blue);padding:0 12px 9px}
+.decisions span:nth-child(2){border-color:var(--green)}
+.decisions span:nth-child(3){border-color:#b85a00}
+.active .reveal{animation-name:read-in;animation-duration:.8s;animation-timing-function:cubic-bezier(.22,.7,.25,1);animation-delay:calc(var(--order,0)*.32s);animation-fill-mode:both}
+@keyframes read-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.active .reveal{animation:none}}
+@media print{.reveal{animation:none!important;opacity:1!important;transform:none!important}}
+
+/* A shared reading edge, with room around the text. */
+.simple-body{top:150px;bottom:120px;left:180px;right:180px;align-items:flex-start;justify-content:flex-start;text-align:left;gap:28px}
+.simple-body>h2{text-align:left;margin:0 0 10px;font-size:36px}
+.simple-message{font-size:42px;line-height:1.6;font-weight:400;max-width:1240px}
+.simple-note{font-size:33px;line-height:1.65;max-width:1240px}
+.compare{text-align:left;grid-template-columns:1fr 60px 1fr;gap:26px;font-size:30px}
+.compare-label{font-size:28px}
+.flow-arrow{text-align:center}
+.role-pair{width:100%;gap:70px;font-size:31px;text-align:left}
+.process{width:100%;justify-content:space-between;gap:62px;text-align:left}
+.process li{min-width:0;flex:1}
+.process li+li:before{left:-45px}
+.example{font-size:32px;padding:4px 0 4px 26px}
+.example-label{font-size:27px}
+.decisions{gap:52px;font-size:31px}
+.decisions span{padding-left:0;padding-right:24px}
+.slide:first-of-type .eyebrow,.slide:first-of-type h1,.cover-credit{text-align:left;margin-left:36px;margin-right:36px}
+.slide:first-of-type h1{margin-top:70px;line-height:1.5}
+.cover-credit{margin-top:44px}
+</style>
+</head>
+<body>
+<div id="viewport"><main id="stage" aria-label="電車は、あと何分？ 発表スライド">
+<div class="progress-track" role="progressbar" aria-label="スライドの進み具合" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1"><div class="progress"></div></div>
+<section class="slide active" aria-label="表紙">
+<div class="page"><b>01</b> / 12</div>
+<p class="eyebrow reveal">2026.10.31　鎌倉駅前プログラミング教室forKids 発表会</p><h1 class="reveal">いつ、電車が来るかを<br>時刻表より<br>わかりやすく見たい！</h1><div class="cover-credit reveal">高島 拓人</div>
+</section>
+<section class="slide" aria-label="自己紹介">
+<div class="page"><b>02</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">自己紹介</h2><p class="simple-name reveal">高島 拓人</p><p class="simple-note reveal">制作テーマ：電車の発車時刻を<br>時刻表よりわかりやすく見る</p><p class="simple-note reveal">発表内容：作ったアプリと、AIを使う中で考えたこと</p></div>
+</section>
+<section class="slide" aria-label="作ったもの">
+<div class="page"><b>03</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">作ったもの</h2><p class="simple-message reveal">次に発車する電車が<br>すぐにわかるアプリ</p><div class="compare reveal"><p><span class="compare-label">時刻表を見るとき</span>並んだ時刻から、次の電車を探す</p><span class="flow-arrow" aria-hidden="true">→</span><p><span class="compare-label">このアプリで見たいこと</span>次の電車の発車時刻をすぐに確認する</p></div><p class="simple-note reveal">田町駅版はサンプル。実際の運行情報ではない。</p></div>
+</section>
+<section class="slide" aria-label="自分で書いたコード">
+<div class="page"><b>04</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">自分で書いたコード</h2><p class="simple-zero reveal"><span class="mono">0</span><span>行</span></p><p class="simple-note reveal">アプリを動かすコードはAIが作成。</p><p class="simple-note reveal">自分の担当：必要な機能の指示と、使いやすさの確認</p></div>
+</section>
+<section class="slide" aria-label="使ったもの">
+<div class="page"><b>05</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">使ったもの</h2><p class="simple-tool mono reveal">Codex</p><p class="simple-note reveal">言葉で伝えた指示に沿って、<br>コードを書いたり直したりするAI</p><ol class="process"><li class="reveal"><span class="step-number mono">01</span>自分が指示する</li><li class="reveal"><span class="step-number mono">02</span>AIがコードを書く</li><li class="reveal"><span class="step-number mono">03</span>自分が確認する</li></ol></div>
+</section>
+<section class="slide" aria-label="自分の仕事">
+<div class="page"><b>06</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">自分の仕事</h2><p class="simple-message reveal">何を作ってほしいか、AIに指示する</p><p class="simple-note reveal">AIへの指示文＝プロンプト</p><div class="example reveal"><p class="example-label">指示の例</p><p>次に発車する電車をすぐ確認したい。<br>発車時刻を大きく表示して、探す手間を減らして。</p></div><p class="simple-note reveal">指示に含める内容：目的と表示の条件</p></div>
+</section>
+<section class="slide" aria-label="指示の難しさ">
+<div class="page"><b>07</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">指示の難しさ</h2><p class="simple-message reveal">必要な条件を伝え、<br>AIが工夫できる余地を残す</p><p class="simple-note reveal">「便利にして」だけでは、ほしい表示が伝わらない。<br>細かく決めすぎると、AIが工夫できる範囲が狭くなる。</p><div class="role-pair"><p class="reveal"><span class="compare-label">自分が決める例</span>次の発車がすぐわかること</p><p class="reveal"><span class="compare-label">AIに任せる例</span>読みやすい配置や余白</p></div></div>
+</section>
+<section class="slide" aria-label="自分で判断すること">
+<div class="page"><b>08</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">自分で判断すること</h2><p class="simple-message reveal">データを使ってよいかは、<br>自分で確認する</p><p class="simple-note reveal">AIが集められるからといって、<br>そのデータを自由に使ってよいわけではない。</p><div class="example reveal"><p class="example-label">今回、自分が判断すること</p><p>データ選び：利用が認められているかを確認<br>田町駅版：サンプルとして扱う</p></div></div>
+</section>
+<section class="slide" aria-label="AGENTS.md">
+<div class="page"><b>09</b> / 12</div>
+<div class="simple-body"><h2 class="reveal mono">AGENTS.md</h2><p class="simple-message reveal">AIに守ってほしいルールを<br>書いておくファイル</p><p class="simple-note reveal">Codexが作業前に読むファイル。<br>毎回守ってほしい条件をまとめておく。</p><div class="example reveal"><p class="example-label">書いておくルールの例</p><p>・次の発車を大きく表示する<br>・サンプルを実際の運行情報として見せない</p></div></div>
+</section>
+<section class="slide" aria-label="AIは思考の代替ではない">
+<div class="page"><b>10</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">AIは思考の代替ではない</h2><p class="simple-message reveal">何を作るか考えることと、<br>できたものの確認は自分の役割</p><ol class="process"><li class="reveal"><span class="step-number mono">01</span>目的を決める</li><li class="reveal"><span class="step-number mono">02</span>AIに作ってもらう</li><li class="reveal"><span class="step-number mono">03</span>自分で判断する</li></ol><p class="simple-note reveal">AIの提案が目的に合っているかを確認。<br>使うかどうかも、自分で判断。</p></div>
+</section>
+<section class="slide" aria-label="学び">
+<div class="page"><b>11</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">学び</h2><p class="simple-message reveal">AIを使うと、毎日使うものを<br>短時間で作れる</p><p class="simple-note reveal">「電車がいつ来るか、もっとわかりやすく見たい」<br>という身近な困りごとから、アプリを作れる。</p><div class="decisions reveal"><span>何を作るか</span><span>何を残すか</span><span>何を削るか</span></div><p class="simple-note reveal">作るものと、残す機能・削る機能の判断は人の役割。</p></div>
+</section>
+<section class="slide" aria-label="展望">
+<div class="page"><b>12</b> / 12</div>
+<div class="simple-body"><h2 class="reveal">展望</h2><p class="simple-message reveal">次の制作予定：都営三田駅版</p><p class="simple-note reveal">時刻表のデータは、自由に使えるとは限らない。<br>ODPTから入手できるものもあるが、<br>使えるデータは提供元や利用条件によって異なる。</p><div class="example reveal"><p class="example-label">次に取り組むこと</p><p>都営交通のデータを使って、三田駅版を制作予定。<br>データの入手先と利用条件を確認しながら進める。</p></div></div>
+</section>
+<div class="footer"><button id="timer" class="timer" title="クリックまたはRキーで経過時間をリセット" aria-label="経過時間をリセット"><span class="timer-label">経過</span><span id="elapsed">00:00</span></button><div class="nav"><span class="hint">← → / クリックでめくる</span><button id="prev" aria-label="前のスライド"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button id="next" aria-label="次のスライド"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></div>
+</main></div>
+<script>
+(()=>{'use strict';const stage=document.getElementById('stage'),slides=[...document.querySelectorAll('.slide')],bar=document.querySelector('.progress'),track=document.querySelector('.progress-track'),prev=document.getElementById('prev'),next=document.getElementById('next');let current=0,started=Date.now();const params=new URLSearchParams(location.search);if(params.has('export'))document.body.classList.add('export');slides.forEach(s=>s.querySelectorAll('.reveal').forEach((e,i)=>e.style.setProperty('--order',i)));function fit(){stage.style.transform=`scale(${Math.min(innerWidth/1600,innerHeight/900)})`}function show(index){current=Math.max(0,Math.min(slides.length-1,index));slides.forEach((s,i)=>{s.classList.toggle('active',i===current);s.setAttribute('aria-hidden',String(i!==current));s.inert=i!==current});bar.style.transform=`scaleX(${(current+1)/slides.length})`;track.setAttribute('aria-valuenow',current+1);prev.disabled=current===0;next.disabled=current===slides.length-1;document.title=`${current+1}/${slides.length}｜電車は、あと何分？｜高島拓人`;history.replaceState(null,'','#'+(current+1));}function tick(){const seconds=Math.floor((Date.now()-started)/1000);document.getElementById('elapsed').textContent=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0')}function reset(){started=Date.now();tick()}prev.addEventListener('click',()=>show(current-1));next.addEventListener('click',()=>show(current+1));document.getElementById('timer').addEventListener('click',reset);stage.addEventListener('click',e=>{if(e.target.closest('button,a')||getSelection().toString())return;show(current+1)});addEventListener('keydown',e=>{if(e.altKey||e.ctrlKey||e.metaKey||e.target.closest('input,textarea,[contenteditable]'))return;if(e.key===' '&&e.target.closest('button,a'))return;if(['ArrowRight','PageDown',' '].includes(e.key)){e.preventDefault();show(current+1)}else if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();show(current-1)}else if(e.key==='Home'){e.preventDefault();show(0)}else if(e.key==='End'){e.preventDefault();show(slides.length-1)}else if(e.key.toLowerCase()==='r')reset();else if(e.key.toLowerCase()==='f'){if(document.fullscreenElement)document.exitFullscreen?.();else document.documentElement.requestFullscreen?.()}});addEventListener('resize',fit);window.deck={show,get current(){return current},count:slides.length,resetTimer:reset};fit();show(Math.max(0,(Number(location.hash.slice(1))||1)-1));tick();setInterval(tick,250);})();
+</script>
+</body>
+</html>

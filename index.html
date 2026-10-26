@@ -161,6 +161,21 @@
 .instruction-layout{grid-template-columns:520px 1fr;gap:64px}
 .instruction-crop{height:315px}
 @media print{.slide{padding-left:96px;padding-right:96px}}
+
+/* Compare the same task, at the same size and reading levels. */
+.efficiency-slide .simple-body{top:118px;gap:18px}
+.efficiency-slide .simple-body>h2{margin-bottom:0}
+.contrast-context{font-size:31px;line-height:1.5}
+.instruction-contrast{display:grid;grid-template-columns:1fr 1fr;gap:64px;width:100%;margin-top:4px}
+.contrast-case{min-width:0}
+.contrast-case h3{margin:0 0 12px;font-size:30px;line-height:1.5;font-weight:650}
+.contrast-quote,.instruction-contrast .instruction-crop{height:235px;border:2px solid var(--ink);background:#fff9e8;padding:18px 22px;overflow:hidden}
+.contrast-quote{font-size:32px;line-height:1.7}
+.instruction-contrast .instruction-crop{padding-bottom:0}
+.contrast-burden{font-size:28px;line-height:1.6;margin-top:14px}
+.contrast-burden span{font-weight:650}
+.contrast-reaction{font-size:28px;line-height:1.5;margin-top:10px}
+.contrast-conclusion{width:100%;font-size:30px;line-height:1.5;padding-top:14px;border-top:4px solid var(--blue)}
 </style>
 </head>
 <body>
@@ -197,11 +212,12 @@
 <section class="slide efficiency-slide" aria-label="指示の細かさと効率">
 <div class="page"><b>08</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">指示の細かさと効率</h2>
-<p class="simple-message reveal">曖昧だと手直しが増え、細かすぎると<br>指示を書く側の負担が増える</p>
-<div class="instruction-layout">
-<div class="instruction-reason reveal"><p class="instruction-label">上司からの指示に置き換えると</p><p>「明日の会議の資料、<br>いい感じに作って」</p><p class="instruction-explain">これだけでは、何を求めているか<br>わからない。</p><p class="instruction-explain">右のように細かく書くと、<br>指示を作るだけでも手間がかかる。</p><p class="instruction-conclusion">目的・必要な内容・期限を伝え、<br>具体的な作り方は任せる。</p></div>
-<div class="instruction-example reveal"><p class="instruction-label">細かすぎる指示の例</p><div class="instruction-crop" aria-label="細かすぎる指示の架空例。文章の多さを示すため、下端を意図的に切って表示。"><div class="instruction-long"><p>明日の会議用に、進捗報告の資料を作って。</p><p>まずデスクトップを開いて、新しいフォルダを作る。</p><p>フォルダ名は「会議資料_最終_本当の最終」にする。</p><p>ファイル名の数字は半角、区切りは半角の下線。</p><p>資料は全部で5ページ。表紙も1ページに数える。</p><p>表紙のタイトルは左から32ミリ、上から28ミリ。</p><p>文字の大きさは28。太字。ただし日付は太字にしない。</p><p>タイトルに「報告」を入れる。「ご報告」にはしない。</p><p>改行は「進捗」の後。ただし2行目は右にずらさない。</p><p>日付は右上。年は4桁。月と日の前に0を付ける。</p><p>本文は上から順に、現状、課題、次の予定と書く。</p><p>見出しと本文の間は12ミリ。13ミリにはしない。</p><p>本文は18ポイント。句点の後に空白は入れない。</p><p>箇条書きは黒丸。丸の直径は文字の高さの4分の1。</p><p>黒丸と文字の間は半角空白2つ。全角空白は使わない。</p><p>表の列幅は左から42、76、38ミリに設定する。</p><p>表の線は0.75ポイント。外側だけ1ポイント。</p><p>数字は右揃え。ただし日付は中央、項目名は左揃え。</p><p>グラフは青。ただし3番目だけ少し濃い青にする。</p><p>その青が濃すぎたら、濃すぎないくらいに戻す。</p><p>余白が広くても、勝手に図や説明を足さない。</p><p>文字が入らなければ、まず言い回しを短くする。</p><p>短くしても意味は変えない。必要な情報も削らない。</p><p>ページ番号は右下。下から15ミリ、右から18ミリ。</p><p>保存したら、一度閉じて、もう一度開いて確認する。</p><p>確認したらPDFにする。PDFの名前にも「最終」を付ける。</p><p>でも元のファイルは消さない。前の最終版も残す。</p><p>送る前に、もう一度タイトルの位置を測る。</p><p>終わったら報告して。途中で変えるときは先に聞いて。</p></div></div><p class="instruction-reaction reveal">これはきもいですね</p></div>
-</div></div></section>
+<p class="contrast-context reveal">同じ依頼：明日の会議で使う進捗報告の資料を作る</p>
+<div class="instruction-contrast">
+<div class="contrast-case reveal"><h3>曖昧すぎる指示</h3><div class="contrast-quote"><p>明日の会議の資料、<br>いい感じに作って。</p></div><p class="contrast-burden">求める内容が伝わらない<br><span>→ 受け手の推測・手直しが増える</span></p></div>
+<div class="contrast-case reveal"><h3>細かすぎる指示</h3><div class="instruction-crop" aria-label="細かすぎる指示の架空例。文章の多さを示すため、下端を意図的に切って表示。"><div class="instruction-long"><p>明日の会議用に、進捗報告の資料を作って。</p><p>まずデスクトップを開いて、新しいフォルダを作る。</p><p>フォルダ名は「会議資料_最終_本当の最終」にする。</p><p>ファイル名の数字は半角、区切りは半角の下線。</p><p>資料は全部で5ページ。表紙も1ページに数える。</p><p>表紙のタイトルは左から32ミリ、上から28ミリ。</p><p>文字の大きさは28。太字。ただし日付は太字にしない。</p><p>タイトルに「報告」を入れる。「ご報告」にはしない。</p><p>改行は「進捗」の後。ただし2行目は右にずらさない。</p><p>日付は右上。年は4桁。月と日の前に0を付ける。</p><p>本文は上から順に、現状、課題、次の予定と書く。</p><p>見出しと本文の間は12ミリ。13ミリにはしない。</p><p>本文は18ポイント。句点の後に空白は入れない。</p><p>箇条書きは黒丸。丸の直径は文字の高さの4分の1。</p><p>黒丸と文字の間は半角空白2つ。全角空白は使わない。</p><p>表の列幅は左から42、76、38ミリに設定する。</p><p>表の線は0.75ポイント。外側だけ1ポイント。</p><p>数字は右揃え。ただし日付は中央、項目名は左揃え。</p><p>グラフは青。ただし3番目だけ少し濃い青にする。</p><p>その青が濃すぎたら、濃すぎないくらいに戻す。</p><p>余白が広くても、勝手に図や説明を足さない。</p><p>文字が入らなければ、まず言い回しを短くする。</p><p>短くしても意味は変えない。必要な情報も削らない。</p><p>ページ番号は右下。下から15ミリ、右から18ミリ。</p><p>保存したら、一度閉じて、もう一度開いて確認する。</p><p>確認したらPDFにする。PDFの名前にも「最終」を付ける。</p><p>でも元のファイルは消さない。前の最終版も残す。</p><p>送る前に、もう一度タイトルの位置を測る。</p><p>終わったら報告して。途中で変えるときは先に聞いて。</p></div></div><p class="contrast-burden">細部まで指定する<br><span>→ 指示を書く側の負担が増える</span></p><p class="contrast-reaction reveal">これはきもいですね</p></div>
+</div><p class="contrast-conclusion reveal">目的・必要な内容・期限を伝え、具体的な作り方は任せる。</p>
+</div></section>
 <section class="slide" aria-label="自分で判断すること">
 <div class="page"><b>09</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自分で判断すること</h2><p class="simple-message reveal">データを使ってよいかは、<br>自分で確認する</p><p class="simple-note reveal">AIが集められるからといって、<br>そのデータを自由に使ってよいわけではない。</p><div class="example reveal"><p class="example-label">今回、自分が判断すること</p><p>データ選び：利用が認められているかを確認<br>田町駅版：サンプルとして扱う</p></div></div>

@@ -119,57 +119,78 @@
 .slide:first-of-type .eyebrow,.slide:first-of-type h1,.cover-credit{text-align:left;margin-left:36px;margin-right:36px}
 .slide:first-of-type h1{margin-top:70px;line-height:1.5}
 .cover-credit{margin-top:44px}
+
+/* This example deliberately overflows its document window. */
+.efficiency-slide .simple-body{gap:22px;top:135px}
+.efficiency-slide .simple-message{font-size:39px;line-height:1.5}
+.instruction-layout{display:grid;grid-template-columns:480px 1fr;gap:48px;width:100%;margin-top:6px}
+.instruction-label{font-size:25px;line-height:1.5;font-weight:650;margin-bottom:12px}
+.instruction-reason>p:nth-child(2){font-size:31px;line-height:1.6;margin-bottom:18px}
+.instruction-explain{font-size:27px;line-height:1.6;margin-bottom:14px}
+.instruction-conclusion{font-size:27px;line-height:1.6;margin-top:20px;padding-top:16px;border-top:4px solid var(--blue)}
+.instruction-crop{height:285px;overflow:hidden;border:2px solid var(--ink);padding:14px 20px 0;background:#fff9e8}
+.instruction-long{font-size:22px;line-height:1.65;color:var(--ink)}
+.instruction-long p{margin:0 0 4px}
+.instruction-reaction{font-size:32px;line-height:1.5;margin-top:18px}
 </style>
 </head>
 <body>
 <div id="viewport"><main id="stage" aria-label="電車は、あと何分？ 発表スライド">
-<div class="progress-track" role="progressbar" aria-label="スライドの進み具合" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1"><div class="progress"></div></div>
+<div class="progress-track" role="progressbar" aria-label="スライドの進み具合" aria-valuemin="1" aria-valuemax="13" aria-valuenow="1"><div class="progress"></div></div>
 <section class="slide active" aria-label="表紙">
-<div class="page"><b>01</b> / 12</div>
+<div class="page"><b>01</b> / 13</div>
 <p class="eyebrow reveal">2026.10.31　鎌倉駅前プログラミング教室forKids 発表会</p><h1 class="reveal">いつ、電車が来るかを<br>時刻表より<br>わかりやすく見たい！</h1><div class="cover-credit reveal">高島 拓人</div>
 </section>
 <section class="slide" aria-label="自己紹介">
-<div class="page"><b>02</b> / 12</div>
+<div class="page"><b>02</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自己紹介</h2><p class="simple-name reveal">高島 拓人</p><p class="simple-note reveal">制作テーマ：電車の発車時刻を<br>時刻表よりわかりやすく見る</p><p class="simple-note reveal">発表内容：作ったアプリと、AIを使う中で考えたこと</p></div>
 </section>
 <section class="slide" aria-label="作ったもの">
-<div class="page"><b>03</b> / 12</div>
+<div class="page"><b>03</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">作ったもの</h2><p class="simple-message reveal">次に発車する電車が<br>すぐにわかるアプリ</p><div class="compare reveal"><p><span class="compare-label">時刻表を見るとき</span>並んだ時刻から、次の電車を探す</p><span class="flow-arrow" aria-hidden="true">→</span><p><span class="compare-label">このアプリで見たいこと</span>次の電車の発車時刻をすぐに確認する</p></div><p class="simple-note reveal">田町駅版はサンプル。実際の運行情報ではない。</p></div>
 </section>
 <section class="slide" aria-label="自分で書いたコード">
-<div class="page"><b>04</b> / 12</div>
+<div class="page"><b>04</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自分で書いたコード</h2><p class="simple-zero reveal"><span class="mono">0</span><span>行</span></p><p class="simple-note reveal">アプリを動かすコードはAIが作成。</p><p class="simple-note reveal">自分の担当：必要な機能の指示と、使いやすさの確認</p></div>
 </section>
 <section class="slide" aria-label="使ったもの">
-<div class="page"><b>05</b> / 12</div>
+<div class="page"><b>05</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">使ったもの</h2><p class="simple-tool mono reveal">Codex</p><p class="simple-note reveal">言葉で伝えた指示に沿って、<br>コードを書いたり直したりするAI</p><ol class="process"><li class="reveal"><span class="step-number mono">01</span>自分が指示する</li><li class="reveal"><span class="step-number mono">02</span>AIがコードを書く</li><li class="reveal"><span class="step-number mono">03</span>自分が確認する</li></ol></div>
 </section>
 <section class="slide" aria-label="自分の仕事">
-<div class="page"><b>06</b> / 12</div>
+<div class="page"><b>06</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自分の仕事</h2><p class="simple-message reveal">何を作ってほしいか、AIに指示する</p><p class="simple-note reveal">AIへの指示文＝プロンプト</p><div class="example reveal"><p class="example-label">指示の例</p><p>次に発車する電車をすぐ確認したい。<br>発車時刻を大きく表示して、探す手間を減らして。</p></div><p class="simple-note reveal">指示に含める内容：目的と表示の条件</p></div>
 </section>
 <section class="slide" aria-label="指示の難しさ">
-<div class="page"><b>07</b> / 12</div>
+<div class="page"><b>07</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">指示の難しさ</h2><p class="simple-message reveal">必要な条件を伝え、<br>AIが工夫できる余地を残す</p><p class="simple-note reveal">「便利にして」だけでは、ほしい表示が伝わらない。<br>細かく決めすぎると、AIが工夫できる範囲が狭くなる。</p><div class="role-pair"><p class="reveal"><span class="compare-label">自分が決める例</span>次の発車がすぐわかること</p><p class="reveal"><span class="compare-label">AIに任せる例</span>読みやすい配置や余白</p></div></div>
 </section>
+<section class="slide efficiency-slide" aria-label="指示の細かさと効率">
+<div class="page"><b>08</b> / 13</div>
+<div class="simple-body"><h2 class="reveal">指示の細かさと効率</h2>
+<p class="simple-message reveal">曖昧だと手直しが増え、細かすぎると<br>指示を書く側の負担が増える</p>
+<div class="instruction-layout">
+<div class="instruction-reason reveal"><p class="instruction-label">上司からの指示に置き換えると</p><p>「明日の会議の資料、<br>いい感じに作って」</p><p class="instruction-explain">これだけでは、何を求めているか<br>わからない。</p><p class="instruction-explain">右のように細かく書くと、<br>指示を作るだけでも手間がかかる。</p><p class="instruction-conclusion">目的・必要な内容・期限を伝え、<br>具体的な作り方は任せる。</p></div>
+<div class="instruction-example reveal"><p class="instruction-label">細かすぎる指示の例</p><div class="instruction-crop" aria-label="細かすぎる指示の架空例。文章の多さを示すため、下端を意図的に切って表示。"><div class="instruction-long"><p>明日の会議用に、進捗報告の資料を作って。</p><p>まずデスクトップを開いて、新しいフォルダを作る。</p><p>フォルダ名は「会議資料_最終_本当の最終」にする。</p><p>ファイル名の数字は半角、区切りは半角の下線。</p><p>資料は全部で5ページ。表紙も1ページに数える。</p><p>表紙のタイトルは左から32ミリ、上から28ミリ。</p><p>文字の大きさは28。太字。ただし日付は太字にしない。</p><p>タイトルに「報告」を入れる。「ご報告」にはしない。</p><p>改行は「進捗」の後。ただし2行目は右にずらさない。</p><p>日付は右上。年は4桁。月と日の前に0を付ける。</p><p>本文は上から順に、現状、課題、次の予定と書く。</p><p>見出しと本文の間は12ミリ。13ミリにはしない。</p><p>本文は18ポイント。句点の後に空白は入れない。</p><p>箇条書きは黒丸。丸の直径は文字の高さの4分の1。</p><p>黒丸と文字の間は半角空白2つ。全角空白は使わない。</p><p>表の列幅は左から42、76、38ミリに設定する。</p><p>表の線は0.75ポイント。外側だけ1ポイント。</p><p>数字は右揃え。ただし日付は中央、項目名は左揃え。</p><p>グラフは青。ただし3番目だけ少し濃い青にする。</p><p>その青が濃すぎたら、濃すぎないくらいに戻す。</p><p>余白が広くても、勝手に図や説明を足さない。</p><p>文字が入らなければ、まず言い回しを短くする。</p><p>短くしても意味は変えない。必要な情報も削らない。</p><p>ページ番号は右下。下から15ミリ、右から18ミリ。</p><p>保存したら、一度閉じて、もう一度開いて確認する。</p><p>確認したらPDFにする。PDFの名前にも「最終」を付ける。</p><p>でも元のファイルは消さない。前の最終版も残す。</p><p>送る前に、もう一度タイトルの位置を測る。</p><p>終わったら報告して。途中で変えるときは先に聞いて。</p></div></div><p class="instruction-reaction reveal">これはきもいですね</p></div>
+</div></div></section>
 <section class="slide" aria-label="自分で判断すること">
-<div class="page"><b>08</b> / 12</div>
+<div class="page"><b>09</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自分で判断すること</h2><p class="simple-message reveal">データを使ってよいかは、<br>自分で確認する</p><p class="simple-note reveal">AIが集められるからといって、<br>そのデータを自由に使ってよいわけではない。</p><div class="example reveal"><p class="example-label">今回、自分が判断すること</p><p>データ選び：利用が認められているかを確認<br>田町駅版：サンプルとして扱う</p></div></div>
 </section>
 <section class="slide" aria-label="AGENTS.md">
-<div class="page"><b>09</b> / 12</div>
+<div class="page"><b>10</b> / 13</div>
 <div class="simple-body"><h2 class="reveal mono">AGENTS.md</h2><p class="simple-message reveal">AIに守ってほしいルールを<br>書いておくファイル</p><p class="simple-note reveal">Codexが作業前に読むファイル。<br>毎回守ってほしい条件をまとめておく。</p><div class="example reveal"><p class="example-label">書いておくルールの例</p><p>・次の発車を大きく表示する<br>・サンプルを実際の運行情報として見せない</p></div></div>
 </section>
 <section class="slide" aria-label="AIは思考の代替ではない">
-<div class="page"><b>10</b> / 12</div>
+<div class="page"><b>11</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">AIは思考の代替ではない</h2><p class="simple-message reveal">何を作るか考えることと、<br>できたものの確認は自分の役割</p><ol class="process"><li class="reveal"><span class="step-number mono">01</span>目的を決める</li><li class="reveal"><span class="step-number mono">02</span>AIに作ってもらう</li><li class="reveal"><span class="step-number mono">03</span>自分で判断する</li></ol><p class="simple-note reveal">AIの提案が目的に合っているかを確認。<br>使うかどうかも、自分で判断。</p></div>
 </section>
 <section class="slide" aria-label="学び">
-<div class="page"><b>11</b> / 12</div>
+<div class="page"><b>12</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">学び</h2><p class="simple-message reveal">AIを使うと、毎日使うものを<br>短時間で作れる</p><p class="simple-note reveal">「電車がいつ来るか、もっとわかりやすく見たい」<br>という身近な困りごとから、アプリを作れる。</p><div class="decisions reveal"><span>何を作るか</span><span>何を残すか</span><span>何を削るか</span></div><p class="simple-note reveal">作るものと、残す機能・削る機能の判断は人の役割。</p></div>
 </section>
 <section class="slide" aria-label="展望">
-<div class="page"><b>12</b> / 12</div>
+<div class="page"><b>13</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">展望</h2><p class="simple-message reveal">次の制作予定：都営三田駅版</p><p class="simple-note reveal">時刻表のデータは、自由に使えるとは限らない。<br>ODPTから入手できるものもあるが、<br>使えるデータは提供元や利用条件によって異なる。</p><div class="example reveal"><p class="example-label">次に取り組むこと</p><p>都営交通のデータを使って、三田駅版を制作予定。<br>データの入手先と利用条件を確認しながら進める。</p></div></div>
 </section>
 <div class="footer"><button id="timer" class="timer" title="クリックまたはRキーで経過時間をリセット" aria-label="経過時間をリセット"><span class="timer-label">経過</span><span id="elapsed">00:00</span></button><div class="nav"><span class="hint">← → / クリックでめくる</span><button id="prev" aria-label="前のスライド"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button><button id="next" aria-label="次のスライド"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></div>

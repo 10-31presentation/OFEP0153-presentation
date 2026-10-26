@@ -132,6 +132,35 @@
 .instruction-long{font-size:22px;line-height:1.65;color:var(--ink)}
 .instruction-long p{margin:0 0 4px}
 .instruction-reaction{font-size:32px;line-height:1.5;margin-top:18px}
+
+/* Use the stage width, with one consistent reading edge. */
+.slide{padding-left:96px;padding-right:96px}
+.simple-body{left:96px;right:96px;top:118px;bottom:105px;gap:36px}
+.simple-body>h2{margin-bottom:16px}
+.simple-message,.simple-note{max-width:none}
+.compare{grid-template-columns:1fr 80px 1fr;gap:42px;margin-top:8px}
+.role-pair{gap:96px;margin-top:12px}
+.process{gap:100px;margin-top:24px}
+.process li+li:before{left:-67px}
+.example{width:100%;padding:12px 28px}
+.decisions{width:100%;gap:72px;margin-top:12px}
+.decisions span{flex:1;padding-bottom:18px}
+.slide:first-of-type .eyebrow,.slide:first-of-type h1,.cover-credit{margin-left:0;margin-right:0}
+.slide:first-of-type h1{max-width:1408px;margin-top:80px}
+.cover-credit{margin-top:62px}
+.wide-profile .simple-body,.wide-zero .simple-body,.wide-tool .simple-body{display:grid;grid-template-columns:480px 1fr;grid-template-rows:auto auto auto;column-gap:92px;row-gap:44px;align-content:start;align-items:start}
+.wide-profile h2,.wide-zero h2,.wide-tool h2{grid-column:1/-1}
+.wide-profile .simple-name,.wide-zero .simple-zero{grid-column:1;grid-row:2/4}
+.wide-profile .simple-note,.wide-zero .simple-note{grid-column:2}
+.wide-profile .simple-name{margin-top:4px}
+.wide-zero .simple-zero{padding-top:4px}
+.wide-tool .simple-tool{grid-column:1;grid-row:2}
+.wide-tool .simple-note{grid-column:2;grid-row:2}
+.wide-tool .process{grid-column:1/-1;grid-row:3;margin-top:44px}
+.efficiency-slide .simple-body{left:96px;right:96px;top:118px;gap:22px}
+.instruction-layout{grid-template-columns:520px 1fr;gap:64px}
+.instruction-crop{height:315px}
+@media print{.slide{padding-left:96px;padding-right:96px}}
 </style>
 </head>
 <body>
@@ -141,7 +170,7 @@
 <div class="page"><b>01</b> / 13</div>
 <p class="eyebrow reveal">2026.10.31　鎌倉駅前プログラミング教室forKids 発表会</p><h1 class="reveal">いつ、電車が来るかを<br>時刻表より<br>わかりやすく見たい！</h1><div class="cover-credit reveal">高島 拓人</div>
 </section>
-<section class="slide" aria-label="自己紹介">
+<section class="slide wide-profile" aria-label="自己紹介">
 <div class="page"><b>02</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自己紹介</h2><p class="simple-name reveal">高島 拓人</p><p class="simple-note reveal">制作テーマ：電車の発車時刻を<br>時刻表よりわかりやすく見る</p><p class="simple-note reveal">発表内容：作ったアプリと、AIを使う中で考えたこと</p></div>
 </section>
@@ -149,11 +178,11 @@
 <div class="page"><b>03</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">作ったもの</h2><p class="simple-message reveal">次に発車する電車が<br>すぐにわかるアプリ</p><div class="compare reveal"><p><span class="compare-label">時刻表を見るとき</span>並んだ時刻から、次の電車を探す</p><span class="flow-arrow" aria-hidden="true">→</span><p><span class="compare-label">このアプリで見たいこと</span>次の電車の発車時刻をすぐに確認する</p></div><p class="simple-note reveal">田町駅版はサンプル。実際の運行情報ではない。</p></div>
 </section>
-<section class="slide" aria-label="自分で書いたコード">
+<section class="slide wide-zero" aria-label="自分で書いたコード">
 <div class="page"><b>04</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">自分で書いたコード</h2><p class="simple-zero reveal"><span class="mono">0</span><span>行</span></p><p class="simple-note reveal">アプリを動かすコードはAIが作成。</p><p class="simple-note reveal">自分の担当：必要な機能の指示と、使いやすさの確認</p></div>
 </section>
-<section class="slide" aria-label="使ったもの">
+<section class="slide wide-tool" aria-label="使ったもの">
 <div class="page"><b>05</b> / 13</div>
 <div class="simple-body"><h2 class="reveal">使ったもの</h2><p class="simple-tool mono reveal">Codex</p><p class="simple-note reveal">言葉で伝えた指示に沿って、<br>コードを書いたり直したりするAI</p><ol class="process"><li class="reveal"><span class="step-number mono">01</span>自分が指示する</li><li class="reveal"><span class="step-number mono">02</span>AIがコードを書く</li><li class="reveal"><span class="step-number mono">03</span>自分が確認する</li></ol></div>
 </section>
